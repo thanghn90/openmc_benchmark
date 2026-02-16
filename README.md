@@ -1,7 +1,7 @@
 # openmc_benchmark
 This repo contains build scripts, SLURM job scripts, and datasets used in our OpenMC benchmarking project.
 
-Common working directory:
+Common working directories:
 - `$OMCDIR`: directory containing source codes and compiled executables, along with some of the scripts to set up compilers (AMD, Intel, etc...)
 - `$BIGDIR`: working directory for the big HYLIFE-II model. e.g. $SCRATCH/OpenMC_HYLIFE_II
 - `$SMALLDIR`: working directory for the small spherical model. e.g. $SCRATCH/OpenMC_Small_Sphere
