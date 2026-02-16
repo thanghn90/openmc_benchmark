@@ -19,7 +19,7 @@ ml intel/2025a CMake AOCC/5.0.0
 #   ml gcc/14.2.0 curl cmake
 
 # Next, define a name for a build (e.g. o3_march), and set corresponding build flags
-export BUILD_NAME=o3_march
+export BUILD_NAME=a5o3march
 export FORTRAN_BUILD_FLAGS="-O3 -DNDEBUG -march=native -ftree-vectorize"
 export BUILD_FLAGS="-O3 -DNDEBUG -march=native -ftree-vectorize -fopenmp=libomp"
 export MPICH_CC=clang
