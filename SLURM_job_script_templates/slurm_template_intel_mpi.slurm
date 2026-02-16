@@ -22,7 +22,7 @@ ml intel/2025a CMake AOCC/5.0.0
 export OMCDIR=$SCRATCH/omc
 
 # Make "openmc" and its required libraries "visible" (e.g. include them in PATH and LD_LIBRARY_PATH environment variables
-export BUILD_NAME=a5o3
+export BUILD_NAME=a5o3march
 export PATH=$PATH:$OMCDIR/openmc_new/release_$BUILD_NAME/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OMCDIR/hdf5/release_$BUILD_NAME/lib:$OMCDIR/netcdf-c/release_$BUILD_NAME/lib64
 
