@@ -1,12 +1,19 @@
 # Special instruction to download and setup AMD AOCC:
 # Commands:
 
+# Set your OpenMC working directory here:
+export OMCDIR=$SCRATCH/omc
+mkdir -p $OMCDIR
+cd $OMCDIR
+
 wget https://download.amd.com/developer/eula/aocc/aocc-5-0/aocc-compiler-5.0.0.tar
 tar xvf aocc-compiler-5.0.0.tar
 rm aocc-compiler-5.0.0.tar
 cd aocc-compiler-5.0.0
 bash install.sh
 source ../setenv_AOCC.sh
+
+# The file setenv_AOCC.sh will be located in $OMCDIR, one level up from aocc-compiler-5.0.0 extracted directory
 
 # Then, need to create config file for each clang compiler to add --gcc-install-dir to the correct path of the current gcc's lib/gcc/x86_64*/*, similar to the way easybuild handle AOCC easyblock here:
 #https://github.com/easybuilders/easybuild-easyblocks/blob/4889a405c91548f11856344aba4a45e0476afd6f/easybuild/easyblocks/a/aocc.py
