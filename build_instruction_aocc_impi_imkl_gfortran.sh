@@ -23,8 +23,11 @@ export BUILD_NAME=o3_march
 export FORTRAN_BUILD_FLAGS="-O3 -DNDEBUG -march=native -ftree-vectorize"
 export BUILD_FLAGS="-O3 -DNDEBUG -march=native -ftree-vectorize -fopenmp=libomp"
 export MPICH_CC=clang
+export I_MPI_CC=clang
 export MPICH_CXX=clang++
+export I_MPI_CXX=clang++
 export MPICH_FC=gfortran
+export I_MPI_FC=gfortran
 
 # Below are set of commands to build OpenMC and its dependencies
 # Note that if you copy-and-paste the entire script (or run it all at once), you might need to separate the PETSc configure and build commands. This is because PETSc might interrupt the paste command at the end of its configuration step.
