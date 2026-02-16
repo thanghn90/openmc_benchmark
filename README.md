@@ -13,7 +13,7 @@ Then, set up AMD and Intel toolchain with [01a_setup_amd_aocc.sh](build_scripts/
 
 Finally, run [02a_build_instruction_aocc_impi_imkl_gfortran.sh](build_scripts/02a_build_instruction_aocc_impi_imkl_gfortran.sh) to build OpenMC and its dependencies with AMD AOCC compilers, Intel MPI, Intel MKL, and GNU Fortran.
 
-Avoid building directly on your `$HOME` directory. This is because Some HPC might impose file count limit on your HOME/SCRATCH/WORK/PROJECT directory, and usually `$HOME` directory have a much lower file count limit (e.g. on Launch and other TAMU HPCs, you can only have up to 10,000 file on your `$HOME` directory. If you're short on file count after building OpenMC and its dependencies, run [cleanup_script.sh](build_scripts/cleanup_script.sh). This will remove temporary build files and the includes + example files in the release directories that are not needed to run OpenMC.
+Avoid building directly on your `$HOME` directory. This is because some HPCs might impose file count limit on your HOME/SCRATCH/WORK/PROJECT directory, and usually `$HOME` directory have a much lower file count limit (e.g. on Launch and other TAMU HPCs, you can only have up to 10,000 file on your `$HOME` directory. If you're short on file count after building OpenMC and its dependencies, run [cleanup_script.sh](build_scripts/cleanup_script.sh). This will remove temporary build files and the includes + example files in the release directories that are not needed to run OpenMC.
 
 # Setting up OpenMC simulations
 To set up the experiment, make sure you download and extract the model 7z files to the corresponding working directories. The folder structure should look like:
@@ -45,7 +45,7 @@ Checklist to make change to your SLURM job scripts and model.xml:
 * Change the module loading lines to match your toolchain setup
 * Change the build name to yours
 * Define `OPENMC_CROSS_SECTIONS` as the path of your `cross_sections.xml` file.
-* Change `BASE_NP` to a different number than default (200000) if your HPC took much longer to run the job (ideally it should take about a bit more than 1 minute to finish an iteration).
+* Change `BASE_NP` to a different number than default (200,000) if your HPC took much longer to run the job (ideally it should take about a bit more than 1 minute to finish an iteration).
 * Change `Model_HYLIFE_II` to `Model_Small_Sphere` for the small sphere simulation
 * Look for `library=` in your `model.xml` file and change it to either `moab` or `libmesh` depending on which library you want to use for unstructured mesh tallying. We recommend `libmesh` since `moab` tallying does not scale well in OpenMP parallelization mode.
 
