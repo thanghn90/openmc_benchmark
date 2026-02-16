@@ -18,7 +18,7 @@ ml intel/2025a CMake
 #   ml gcc/14.2.0 curl cmake
 
 # Next, define a name for a build (e.g. o3_march), and set corresponding build flags
-export BUILD_NAME=o3_march
+export BUILD_NAME=i25o3march
 export GCC_BUILD_FLAGS="-O3 -DNDEBUG -march=native -ftree-vectorize"
 export BUILD_FLAGS="-O3 -DNDEBUG -march=native -ftree-vectorize"
 
