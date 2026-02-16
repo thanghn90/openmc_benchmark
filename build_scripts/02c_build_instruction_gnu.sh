@@ -17,7 +17,7 @@ ml foss/2025a CMake
 #   ml gcc/14.2.0 openblas curl cmake
 
 # Next, define a name for a build (e.g. o3_march), and set corresponding build flags
-export BUILD_NAME=o3_march
+export BUILD_NAME=g14o3march
 export BUILD_FLAGS="-O3 -DNDEBUG -march=native -ftree-vectorize"
 
 # Below are set of commands to build OpenMC and its dependencies
