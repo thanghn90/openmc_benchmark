@@ -46,7 +46,7 @@ Checklist to make change to your SLURM job scripts and model.xml:
 * Change the build name to yours
 * Define `OPENMC_CROSS_SECTIONS` as the path of your `cross_sections.xml` file.
 * Change `BASE_NP` to a different number than default (200,000) if your HPC took much longer to run the job (ideally it should take about a bit more than 1 minute to finish an iteration).
-* Change `Model_HYLIFE_II` to `Model_Small_Sphere` for the small sphere simulation
+* Change `Model_HYLIFE_II` to `Model_Small_Sphere` for the small sphere simulation, and also change `output` to `SimOut` output directory name.
 * Look for `library=` in your `model.xml` file and change it to either `moab` or `libmesh` depending on which library you want to use for unstructured mesh tallying. We recommend `libmesh` since `moab` tallying does not scale well in OpenMP parallelization mode.
 
 # Submitting SLURM job script and analyzing output log files
