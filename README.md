@@ -59,3 +59,10 @@ After the simulation is done, you can grep for just the calculation rate using t
 for i in $(seq 1 32); do grep Rate mpi.a5o3.moab.$i.1.out; done |awk '{print $5}'
 ```
 This will print out the calculation rates (particles/s) for each 1st iteration of the OpenMC simulations ranging from 1 to 32 MPI threads.
+
+# Hardware specs and BIOS settings of various tested Linux HPCs
+
+|  | Turin Testbed | Launch | Anvil | Delta | ACES | STAMPEDE3 |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| **Server Brand** | Dell | Dell |  HPE | Dell | Dell | Dell |
+| **Server Model** | PowerEdge R6725 | PowerEdge R6625} | PowerEdge C6525 | ProLiant XL225n Gen10 Plus | PowerEdge R760 | PowerEdge C6620 |
