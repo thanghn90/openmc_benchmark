@@ -56,7 +56,7 @@ sbatch slurm_job_script_file_name.slurm
 ```
 After the simulation is done, you can grep for just the calculation rate using the following command template:
 ```
-for i in $(seq 1 32); do grep Rate mpi.a5o3.moab.$i.1.out; done |awk '{print $5}'
+for i in $(seq 1 32); do grep Rate mpi.a5o3.moab.$i.1.out; done |awk '{print $5'
 ```
 This will print out the calculation rates (particles/s) for each 1st iteration of the OpenMC simulations ranging from 1 to 32 MPI threads.
 
@@ -65,4 +65,24 @@ This will print out the calculation rates (particles/s) for each 1st iteration o
 |  | Turin Testbed | Launch | Anvil | Delta | ACES | STAMPEDE3 |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
 | **Server Brand** | Dell | Dell |  HPE | Dell | Dell | Dell |
-| **Server Model** | PowerEdge R6725 | PowerEdge R6625} | PowerEdge C6525 | ProLiant XL225n Gen10 Plus | PowerEdge R760 | PowerEdge C6620 |
+| **Server Model** | PowerEdge R6725 | PowerEdge R6625 | PowerEdge C6525 | ProLiant XL225n Gen10 Plus | PowerEdge R760 | PowerEdge C6620 |
+| **CPU Brand** | AMD | AMD | AMD | AMD | Intel | Intel |
+| **CPU Model** | EPYC 9755 | EPYC 9654 | EPYC 7763 | EPYC 7763 | Xeon Platinum 8468 | Xeon CPU Max 9480 |
+| **CPU Family** | Turin | Genoa | Milan | Milan | Sapphire Rapids | Sapphire Rapids |
+| **Number of sockets** | 2 | 2 | 2 | 2 | 2 | 2 |
+| **Cores per socket** | 128 | 96 | 64 | 64 | 48 | 56 |
+| **Cores per NUMA node** | 32 | 96 | 16 | 16 | 24 | 56 |
+| **Max CPU Frequency (GHz)** | 4.1 | 3.55 | 3.5 | 3.5 | 3.8 | 3.5 |
+| **L3 Cache per socket (MB)** | 512 | 384 | 256 | 256 | 105 | 112.5 |
+| **RAM per socket (GB)** | 768 | 192 | 128 | 128 | 256 | 64 |
+| **RAM per NUMA node (GB)** | 192 | 192 | 32 | 32 | 128 | 64 |
+| **RAM generation** | DDR5 | DDR5 | DDR4 | DDR4 | DDR5 | DDR5 |
+| **Number of RAM Channels** | 12 | 12 | 8 | 8 | 8 | 8 |
+| **RAM speed (MT/s)** | 6000 | 4800 | 3200 | 3200 | 4800 | 4800 |
+| **Hyperthreading** | No | No | No | No | No | No |
+| **APBD** | No | No | Yes | Yes | N/A | N/A |
+| **Determinism Slider** | Power | Power | Performance | Auto | N/A | N/A |
+| **cTDP** | Auto | Maximum | Maximum | N/A | N/A | N/A |
+| **System Profile** | Custom | Performance | Custom | Performance | Performance | N/A |
+| **TSME** | No | No | No | No | No | N/A |
+| **OS Version** | RHEL 9.4 | RHEL 8.10 | Rocky 8.10 | RHEL 9.4 | RHEL 8.10 | Rocky 9.5 |
